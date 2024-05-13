@@ -33,16 +33,16 @@ def carregar_imagens(grupo, select_box, largura):
     # Condições para exibir imagens com base no grupo e no selectbox
     if grupo == "Panorama Geral":
         if select_box == "Status Jurídico":
-            imagens = [("figuras\status_juridico_2022.jpg", "Status Jurídico")]
+            imagens = [("figuras/status_juridico_2022.jpg", "Status Jurídico")]
         elif select_box == "Grau do Curso":
-            imagens = [("figuras\grau_curso_2022.jpg", "Grau do Curso")]
+            imagens = [("figuras/grau_curso_2022.jpg", "Grau do Curso")]
         elif select_box == "Conceitos do Curso":
-            imagens = [("figuras\conceito_curso_2022.jpg", "Conceito do Curso")]
+            imagens = [("figuras/conceito_curso_2022.jpg", "Conceito do Curso")]
     elif grupo == "Produção Intelectual":
         if select_box == "Trabalho Completo":
-            imagens = [("figuras\grupo01_natureza_trabalho_b_2022.jpg", "Trabalho Completo")]
+            imagens = [("figuras/grupo01_natureza_trabalho_b_2022.jpg", "Trabalho Completo")]
         elif select_box == "Patentes":
-            imagens = [("figuras\grupo01_patentes_2022.jpg", "Patentes")]
+            imagens = [("figuras/grupo01_patentes_2022.jpg", "Patentes")]
 
     # Exibir as imagens se houver uma lista de imagens válida
     if imagens:
