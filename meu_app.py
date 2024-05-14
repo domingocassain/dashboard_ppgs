@@ -16,9 +16,9 @@ opcoes_selectbox = []
 
 # Dependendo do grupo selecionado, definir as opções para o selectbox
 if grupo_selecionado == "Panorama Geral":
-    opcoes_selectbox = ["Status Jurídico", "Grau do Curso", "Conceitos do Curso"]
+    opcoes_selectbox = ["Status Jurídico", "Grau dos Cursos", "Conceitos dos Cursos"]
 elif grupo_selecionado == "Produção Intelectual":
-    opcoes_selectbox = ["Trabalho Completo", "Patentes"]
+    opcoes_selectbox = ["Trabalhos Completos", "Patentes"]
 
 # Segundo selectbox para selecionar uma opção
 opcao_selectbox = st.sidebar.selectbox(
