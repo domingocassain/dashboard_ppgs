@@ -26,23 +26,27 @@ opcao_selectbox = st.sidebar.selectbox(
     opcoes_selectbox
 )
 
+ano_selectbox = st.sidebar.selectbox(
+    "Selecione o ano:",
+    ["2022", "2021", "2020", "2019", "2018", "2017", "2016", "2015", "2014", "2013"])
+
 # Função para carregar imagens com base na configuração do radio e selectbox
-def carregar_imagens(grupo, select_box, largura):
+def carregar_imagens(grupo, select_box, ano, largura):
     imagens = []
 
     # Condições para exibir imagens com base no grupo e no selectbox
     if grupo == "Panorama Geral":
         if select_box == "Status Jurídico":
-            imagens = [("figuras/status_juridico_2022.jpg", "Status Jurídico")]
+            imagens = [("figuras\\status_juridico_{0}.jpg".format(ano), "Status Jurídico")]
         elif select_box == "Grau do Curso":
-            imagens = [("figuras/grau_curso_2022.jpg", "Grau do Curso")]
+            imagens = [("figuras\\grau_curso_{0}.jpg".format(ano), "Grau do Curso")]
         elif select_box == "Conceitos do Curso":
-            imagens = [("figuras/conceito_curso_2022.jpg", "Conceito do Curso")]
+            imagens = [("figuras\\conceito_curso_{0}.jpg".format(ano), "Conceito do Curso")]
     elif grupo == "Produção Intelectual":
         if select_box == "Trabalho Completo":
-            imagens = [("figuras/grupo01_natureza_trabalho_b_2022.jpg", "Trabalho Completo")]
+            imagens = [("figuras\\grupo01_natureza_trabalho_b_{0}.jpg".format(ano), "Trabalho Completo")]
         elif select_box == "Patentes":
-            imagens = [("figuras/grupo01_patentes_2022.jpg", "Patentes")]
+            imagens = [("figuras\\grupo01_patentes_{0}.jpg".format(ano), "Patentes")]
 
     # Exibir as imagens se houver uma lista de imagens válida
     if imagens:
@@ -51,4 +55,4 @@ def carregar_imagens(grupo, select_box, largura):
         st.write("Nenhuma imagem encontrada.")
 
 # Chamar a função para mostrar as imagens com base no selectbox e radio button
-carregar_imagens(grupo_selecionado, opcao_selectbox, largura=900)
+carregar_imagens(grupo_selecionado, opcao_selectbox, ano_selectbox, largura=900)
